@@ -4,7 +4,7 @@ BACK_END='database'
 CELERY_TIMEZONE='Asia/Taipei'
 CELERY_ENABLE_UTC=True
 
-# Broker 的 URL
+# Broker 的 URL, 相當於 inline 設定的 broker 屬性。
 # 參考：http://docs.celeryproject.org/en/latest/getting-started/brokers/sqlalchemy.html#broker-sqlalchemy
 BROKER_URL = 'sqla+mysql://root:t0036659@localhost/for_celery'
 
