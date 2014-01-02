@@ -18,18 +18,18 @@ from celery import Celery
 import time,urllib2
 
 # 1.使用 inline Configure
-#	app = Celery('hello', backend='amqp', broker='amqp://guest@localhost//')
-#	app.conf.update(
-#		# 建議使用原始的 pickle ，因為似乎JSON無法正確傳輸 Instance Object
-#	    # CELERY_TASK_SERIALIZER='json',
-#	    # CELERY_ACCEPT_CONTENT=['json'],  # Ignore other content
-#	    # CELERY_RESULT_SERIALIZER='json',
-#	    CELERY_TIMEZONE='Asia/Taipei',
-#	    CELERY_ENABLE_UTC=True,
-#	    # BROKER_URL='amqp://guest@192.168.99.99//',
-#	)
-#	# 如果要改設定必須在調用 Task 之前, 如果已經呼叫過 Task.delay() 再修改就沒用了。
-#	app.conf.update(BROKER_URL='amqp://guest@192.168.99.99//')
+# app = Celery('hello', backend='amqp', broker='amqp://guest@localhost//')
+# app.conf.update(
+# 	# 建議使用原始的 pickle ，因為似乎JSON無法正確傳輸 Instance Object
+# 	# CELERY_TASK_SERIALIZER='json',
+# 	# CELERY_ACCEPT_CONTENT=['json'],  # Ignore other content
+# 	# CELERY_RESULT_SERIALIZER='json',
+# 	CELERY_TIMEZONE='Asia/Taipei',
+# 	CELERY_ENABLE_UTC=True,
+# 	# BROKER_URL='amqp://guest@192.168.99.99//',
+# )
+# # 如果要改設定必須在調用 Task 之前, 如果已經呼叫過 Task.delay() 再修改就沒用了。
+# app.conf.update(BROKER_URL='amqp://guest@192.168.99.99//')
 
 # 2.使用外部 Configure 的作法
 app = Celery('hello')
