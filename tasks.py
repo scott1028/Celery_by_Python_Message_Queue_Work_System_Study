@@ -3,6 +3,10 @@
 # 以下展示 Celery with RabbitMQ 的 Message Queue 運作架構
 # 最終運行的平台是 Worker Server, Client 只是傳遞 Task Message 過去而已，然後可以取回工作成果！
 #
+# 需要的套件：
+# 	SQLAlchemy
+# 	MySQLdb
+#
 # 啟動 Worker Service 方式：
 # Consumer:
 #	celery -A task worker --loglevel=info
