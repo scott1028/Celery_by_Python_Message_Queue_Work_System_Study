@@ -34,6 +34,7 @@ import time,urllib2
 # 2.使用外部 Configure 的作法
 app = Celery('hello')
 app.config_from_object('my_celery_setting') # my_celery_setting.py
+# app.config_from_object('{modules}.my_celery_setting')	# 按照 celery worker 在 module 的位置要定義不同的字串
 
 @app.task
 def echo(string, string2=None):
