@@ -28,8 +28,8 @@ import time,urllib2
 #	app.conf.update(BROKER_URL='amqp://guest@192.168.99.99//')
 
 # 2.使用外部 Configure 的作法
-	app = Celery('hello')
-	app.config_from_object('my_celery_setting') # my_celery_setting.py
+app = Celery('hello')
+app.config_from_object('my_celery_setting') # my_celery_setting.py
 
 @app.task
 def echo(string, string2=None):
