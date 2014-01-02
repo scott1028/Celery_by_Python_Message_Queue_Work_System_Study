@@ -13,7 +13,11 @@
 from celery import Celery
 import time,urllib2
 
-app = Celery('hello', backend='amqp', broker='amqp://guest@localhost//')
+# app = Celery('hello', backend='amqp', broker='amqp://guest@localhost//')
+app = Celery('hello')
+
+# 使用外部設定檔
+app.config_from_object('my_celery_setting')
 
 app.conf.update(
 	# 建議使用原始的 pickle ，因為似乎JSON無法正確傳輸 Instance Object
