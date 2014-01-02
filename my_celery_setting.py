@@ -1,5 +1,8 @@
 # coding:utf-8
 
+# Ubuntu 下關閉 RabbitMQ Server, stop/start
+# sudo invoke-rc.d rabbitmq-server stop
+
 BACK_END='database'
 CELERY_TIMEZONE='Asia/Taipei'
 CELERY_ENABLE_UTC=True
