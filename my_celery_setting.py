@@ -14,7 +14,7 @@ CELERY_ENABLE_UTC=True
 BROKER_URL = 'sqla+sqlite:///celerydb.sqlite'	# 只有這個是必要資訊
 
 
-# 用來存放結果的 URL
+# 用來存放結果的 URL, 非必要設定, 但是如果沒有設定 celery_result_backend unittest 會拋錯。
 # 參考：http://docs.celeryproject.org/en/latest/configuration.html#conf-database-result-backend
 # MySQL
 # CELERY_RESULT_BACKEND = 'db+mysql://root:t0036659@localhost/for_celery'
