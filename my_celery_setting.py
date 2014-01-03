@@ -11,7 +11,7 @@ CELERY_ENABLE_UTC=True
 # MySQL
 # BROKER_URL = 'sqla+mysql://root:t0036659@localhost/for_celery'
 # SQLite
-BROKER_URL = 'sqla+sqlite:///celerydb.sqlite'
+BROKER_URL = 'sqla+sqlite:///celerydb.sqlite'	# 只有這個是必要資訊
 
 
 # 用來存放結果的 URL
