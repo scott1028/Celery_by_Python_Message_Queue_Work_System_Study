@@ -20,4 +20,4 @@ BROKER_URL = 'sqla+sqlite:///celerydb.sqlite'
 # MySQL
 # CELERY_RESULT_BACKEND = 'db+mysql://root:t0036659@localhost/for_celery'
 # SQLite
-CELERY_RESULT_BACKEND = 'db+sqlite:///celerydb.sqlite'
+# CELERY_RESULT_BACKEND = 'db+sqlite:///celerydb.sqlite'
